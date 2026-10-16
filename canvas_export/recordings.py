@@ -11,7 +11,7 @@ from .config import RECORDINGS_CSV
 from .discover import read_included_courses
 from .manifest import load_manifest, now_iso
 
-CANVAS_BASE = "https://canvas.stanford.edu"
+CANVAS_BASE = "https://bcourses.berkeley.edu"
 
 _RECORDING_RE = re.compile(
     r'https?://[^\s"\'<>]*(?:'

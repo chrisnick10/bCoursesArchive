@@ -1,6 +1,8 @@
-# GSB Canvas Archive
+# Haas Canvas Archive
 
-Download all your Stanford GSB Canvas course materials — slides, readings, and assignments — to your computer, then search everything using Claude AI.
+Download all your Berkeley Haas Canvas course materials — slides, readings, and assignments — to your computer, then search everything using Claude AI.
+
+> Forked from [xavierahojjx-afk/CanvasArchive](https://github.com/xavierahojjx-afk/CanvasArchive), adapted for Berkeley Haas (bCourses).
 
 **No coding experience needed.** Just follow the steps below.
 
@@ -29,7 +31,7 @@ end.
 
 ## What this does
 
-This tool logs into Canvas as you, downloads all your course files, and organizes them into folders on your computer. You can then upload everything to Google Drive and ask Claude questions like *"What are the customer discovery and user interview frameworks from Startup Garage?"* or *"Based on everything I learned at GSB — coursework, guest speakers, cases — what are the most important signals VCs look for when evaluating early-stage founders?."*
+This tool logs into Canvas as you, downloads all your course files, and organizes them into folders on your computer. You can then upload everything to Google Drive and ask Claude questions like *"What are the customer discovery and user interview frameworks from my entrepreneurship course?"* or *"Based on everything I learned at Haas — coursework, guest speakers, cases — what are the most important signals VCs look for when evaluating early-stage founders?."*
 
 It downloads:
 - 📁 Slides and readings from every module
@@ -76,11 +78,11 @@ You need two things installed on your computer. This is a one-time setup.
 
 Your Canvas token is like a password that lets this tool download your own course materials. It can only see **your** courses — not anyone else's.
 
-1. Go to **[canvas.stanford.edu](https://canvas.stanford.edu)** and sign in.
+1. Go to **[bcourses.berkeley.edu](https://bcourses.berkeley.edu)** and sign in.
 2. Click your **profile picture** in the top-left corner → **Settings**.
 3. Scroll down to **Approved Integrations**.
 4. Click **+ New Access Token**.
-5. In the **Purpose** field, type anything — e.g. `GSB Archive`.
+5. In the **Purpose** field, type anything — e.g. `Haas Archive`.
 6. Leave **Expires** blank.
 7. Click **Generate Token**.
 8. A long string of letters and numbers appears. **Copy it now** — Canvas will never show it again.
@@ -177,14 +179,14 @@ Open the `.env` file in any text editor (Notepad on Windows, TextEdit on Mac). I
 
 ```
 CANVAS_TOKEN=
-CANVAS_BASE_URL=https://canvas.stanford.edu
+CANVAS_BASE_URL=https://bcourses.berkeley.edu
 ```
 
 Paste your token after the `=` on the first line so it looks like:
 
 ```
 CANVAS_TOKEN=your_long_token_here
-CANVAS_BASE_URL=https://canvas.stanford.edu
+CANVAS_BASE_URL=https://bcourses.berkeley.edu
 ```
 
 Save and close the file.
@@ -196,7 +198,7 @@ Save and close the file.
 python -m canvas_export verify
 ```
 
-You should see a small table with your name and Stanford email. If you get an error, double-check that your token was copied fully with no extra spaces.
+You should see a small table with your name and Berkeley email. If you get an error, double-check that your token was copied fully with no extra spaces.
 
 ---
 
@@ -273,7 +275,7 @@ Once downloading is complete, upload your files to Google Drive so Claude can se
 ### Install Google Drive for Desktop
 
 1. Download **[Google Drive for Desktop](https://www.google.com/drive/download/)** and install it.
-2. Sign in with your **personal** Google account (not your Stanford account, unless you prefer that).
+2. Sign in with your **personal** Google account (not your Berkeley account, unless you prefer that).
 3. When prompted, choose **"Mirror files"** so a copy stays on your computer.
 
 ### Copy your files into Drive
@@ -282,8 +284,8 @@ Once downloading is complete, upload your files to Google Drive so Claude can se
    - **Windows:** Open File Explorer — it appears as `Google Drive (G:)` or similar in the left sidebar.
    - **Mac:** Open Finder — it appears under Locations.
 2. Open `My Drive` inside it.
-3. Create a new folder called **`Stanford Canvas Archive`**.
-4. Open your project folder (`CanvasArchive-main`), go into the `downloads` folder, and copy everything inside into `Stanford Canvas Archive`.
+3. Create a new folder called **`Berkeley Canvas Archive`**.
+4. Open your project folder (`CanvasArchive-main`), go into the `downloads` folder, and copy everything inside into `Berkeley Canvas Archive`.
 5. The sync starts automatically. The Google Drive icon in your taskbar/menu bar shows a spinner while uploading — wait for it to show a checkmark.
 
 > For large archives this can take 30–60 minutes depending on your internet speed. You can leave it running in the background.
@@ -298,14 +300,14 @@ Once your files are in Google Drive, set up a Claude Project to search them.
 
 1. Go to **[claude.ai](https://claude.ai)** and sign in.
 2. In the left sidebar, click **Projects** → **New Project**.
-3. Name it something like `Stanford GSB Coursework`.
+3. Name it something like `Berkeley Haas Coursework`.
 
 ### Step 2 — Add your instructions
 
 Click **Edit project instructions** and paste this exactly:
 
 ```
-When I ask questions about my GSB coursework, search my Google Drive folder "Stanford Canvas Archive" for relevant materials. Cite the specific course and file where possible. If you can't find it in the connected files, say so rather than guessing. If a query is ambiguous about scope, default to searching that folder.
+When I ask questions about my Haas coursework, search my Google Drive folder "Berkeley Canvas Archive" for relevant materials. Cite the specific course and file where possible. If you can't find it in the connected files, say so rather than guessing. If a query is ambiguous about scope, default to searching that folder.
 ```
 
 ### Step 3 — Connect Google Drive
@@ -313,7 +315,7 @@ When I ask questions about my GSB coursework, search my Google Drive folder "Sta
 1. Inside the project, click **Add content** (or the `+` button).
 2. Select **Google Drive**.
 3. Authorize Claude to access your Google account if prompted.
-4. Navigate to and select the **`Stanford Canvas Archive`** folder.
+4. Navigate to and select the **`Berkeley Canvas Archive`** folder.
 5. Click **Add**. Claude will index the files — this takes a few minutes.
 
 ### Step 4 — Start asking questions

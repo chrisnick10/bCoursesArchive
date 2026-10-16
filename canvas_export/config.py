@@ -15,7 +15,7 @@ RECORDINGS_CSV = PROJECT_ROOT / "recordings_to_review.csv"
 CREDENTIALS_JSON = PROJECT_ROOT / "credentials.json"
 TOKEN_JSON = PROJECT_ROOT / "token.json"
 
-DRIVE_ROOT_FOLDER_NAME = "GSB Canvas Archive"
+DRIVE_ROOT_FOLDER_NAME = "Haas Canvas Archive"
 
 
 @dataclass(frozen=True)
@@ -31,5 +31,5 @@ def load_settings() -> Settings:
         raise RuntimeError(
             "CANVAS_TOKEN is not set. Copy .env.example to .env and paste your token."
         )
-    base_url = os.environ.get("CANVAS_BASE_URL", "https://canvas.stanford.edu").rstrip("/")
+    base_url = os.environ.get("CANVAS_BASE_URL", "https://bcourses.berkeley.edu").rstrip("/")
     return Settings(canvas_token=token, canvas_base_url=base_url)

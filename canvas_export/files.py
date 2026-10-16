@@ -270,7 +270,7 @@ def _archive_course(
 
     seen_file_ids: set[int] = set()
 
-    # Syllabus body — at GSB this is where Teaching Team lives when default_view=syllabus
+    # Syllabus body — at Haas this is where Teaching Team lives when default_view=syllabus
     syllabus_body = getattr(course, "syllabus_body", "") or ""
     if syllabus_body:
         try:

@@ -1,6 +1,6 @@
-# Agent instructions — GSB Canvas Archive
+# Agent instructions — Haas Canvas Archive
 
-You are helping a **non-technical Stanford GSB student** set up and run this tool.
+You are helping a **non-technical Berkeley Haas student** set up and run this tool.
 Your job is to make this **completely friction-free**: you run every command yourself.
 Never ask the user to copy, paste, or type commands into a terminal. Only stop to ask
 them for things you genuinely cannot do yourself (their Canvas token, choices during
@@ -90,17 +90,17 @@ Run these in order, narrating each step.
 
 6. **Get the Canvas token.** Walk the user through generating it (don't try to do this
    yourself — it's in their browser):
-   1. Go to https://canvas.stanford.edu and sign in.
+   1. Go to https://bcourses.berkeley.edu and sign in.
    2. Profile picture (top-left) → **Settings**.
    3. Scroll to **Approved Integrations** → **+ New Access Token**.
-   4. Purpose: anything (e.g. `GSB Archive`). Leave **Expires** blank → **Generate Token**.
+   4. Purpose: anything (e.g. `Haas Archive`). Leave **Expires** blank → **Generate Token**.
    5. Copy the token — Canvas shows it only once.
 
    Then have the token stored securely — follow
    **[Handling the Canvas token securely](#handling-the-canvas-token-securely)** below.
 
 7. **Verify:** `python -m canvas_export verify`
-   - Success shows a small table with the user's name and Stanford email. Tell them it
+   - Success shows a small table with the user's name and Berkeley email. Tell them it
      worked. If it errors, the token is likely wrong or has stray spaces — re-do step 6.
 
 ## Download sequence
@@ -145,10 +145,10 @@ Run these in order, narrating each step.
 The final steps happen in the browser and the user must do them — guide them through:
 
 - **Upload to Google Drive:** install Google Drive for Desktop (mirror files), create a
-  folder named exactly **`Stanford Canvas Archive`** in `My Drive`, and copy everything
+  folder named exactly **`Berkeley Canvas Archive`** in `My Drive`, and copy everything
   inside this repo's `downloads/` folder into it. Wait for sync to finish.
 - **Set up Claude search:** create a Claude Project, paste the project instructions from
-  the README, connect the `Stanford Canvas Archive` Google Drive folder, and start asking
+  the README, connect the `Berkeley Canvas Archive` Google Drive folder, and start asking
   questions.
 
 See `README.md` for the exact wording of the Claude project instructions and a full

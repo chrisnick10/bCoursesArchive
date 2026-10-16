@@ -35,7 +35,7 @@ def _cmd_verify() -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="canvas_export",
-        description="Archive Stanford GSB Canvas course materials to Google Drive.",
+        description="Archive Berkeley Haas Canvas course materials to Google Drive.",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
