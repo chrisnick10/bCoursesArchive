@@ -1,4 +1,4 @@
-# Haas Canvas Archive
+# bCourses Archive
 
 Download all your Berkeley Haas Canvas course materials — slides, readings, and assignments — to your computer, then search everything using Claude AI.
 
